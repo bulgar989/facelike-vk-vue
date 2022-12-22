@@ -1,6 +1,6 @@
 <template>
   <div>
-    {{ rand }}
+    <img :src="user.photo_400_orig" alt="">
     <button type="button" @click="btnQuote">click</button>
   </div>
 </template>
@@ -10,15 +10,10 @@ import { mapActions, mapState, useStore } from 'vuex'
 
 const store = useStore()
 
-
 const btnQuote = () => store.dispatch('USER_RANDOM')
-const rand = computed(() => {
+const user = computed(() => {
   return store.state.user_random
 })
 
-onMounted(() => {
-  store.dispatch('USER_RANDOM')
-  
-  console.log(store.state.count)
-})
+onMounted(() => store.dispatch('USER_RANDOM'))
 </script>

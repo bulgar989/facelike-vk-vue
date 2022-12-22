@@ -18,7 +18,7 @@ export default createStore({
                 return Math.floor(Math.random() * (max - min + 1) + min)
             }   
             const rndInt = randomIntFromInterval(1, 200)
-            User.search({offset: rndInt}).then(res => commit('USER_RANDOM', res.data.response))
+            User.search({offset: rndInt}).then(res => commit('USER_RANDOM', res.data[0]))
         }
     },
     getters: {
