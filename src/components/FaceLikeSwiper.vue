@@ -3,7 +3,7 @@
         <div v-for="user in users" :key="user.id">
             <img 
                 class="ficelike-img"
-                :src="user.photo_200"
+                :src="user.photo_max"
                 :draggable="true" 
                 @dragstart="onDragStart($event, o)"
                 v-touch:swipe="onSwipeItem"
@@ -21,7 +21,7 @@ export default {
     setup(props, { emit }){
 
         const onDragStart = (ev, text) => {
-            console.log('rtrtrtrtdf')
+            
         }
         const onDrop = (ev) => {
             emit('onClickSwipe')
@@ -49,8 +49,8 @@ export default {
         display: flex;
         align-items: center;
         justify-content: center;
-        /* flex-direction: row;
-        align-items: stretch; */
+         /* flex-direction: row;
+        align-items: stretch;  */
     }
     .ficelike-img {
         border-radius: 15px;
