@@ -1,6 +1,7 @@
 # VK
 
-- Свайпить девушек
+- Свайпить девушек на компе и на телефоне из вк
+- Как это выглядит https://facelike.bmlabs.ru/
 
 ## Recommended IDE Setup
 
